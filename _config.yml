@@ -13,7 +13,7 @@ baseurl: ''
 lang: en
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone: America/New_York
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
@@ -28,28 +28,28 @@ description: >-                        # used by seo meta and the atom feed
   and focuses on text presentation.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://www.joeycodes.dev'
 
 github:
-  username: github_username             # change to your github username
+  username: poster515             # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: JosephPost2            # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@doamin.com             # change to your email address
+  name: Joseph Post
+  email: jpost625@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+    - https://twitter.com/josephpost2      # change to your twitter homepage
+    - https://github.com/poster515       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/joseph-post-a5481b28/
 
-google_site_verification: google_meta_tag_verification # change to your verification string
+google-site-verification: 5l26FluZ4h3LapHt92oAOmke_x9noj_m34zBdj2grL4 # change to your verification string
 
 # ↑ --------------------------
 
@@ -72,23 +72,23 @@ google_analytics:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode:   # [light|dark]
+theme_mode: dark  # [light|dark]
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: ''
+img_cdn: './images'
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/commons/avatar.jpg
+avatar: /golden.jpeg
 
 # boolean type, the global switch for ToC in posts.
 toc: true
 
 disqus:
-  comments: false  # boolean type, the global switch for posts comments.
+  comments: true  # boolean type, the global switch for posts comments.
   shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 paginate: 10
