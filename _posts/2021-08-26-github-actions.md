@@ -11,7 +11,7 @@ tags: [git, github, conda, python, php, actions, yml]
 
 In my first post, I wanted to share a very cool functionality I just recently discovered within github called 'github actions'. These are actions that are triggered by a whole suite of events that you can configure. In general, the whole thing is completely configurable by you. 
 
-Actions are really easy to configure and use, and can help any orgnaization run test scripts based on committed code. I imagine it helps significantly for continuous integration/continuous development (CI/CD) operations within distributed organizations. You can also proudly display a status badge on your repo README. Hopefully it displays 'passing'. 
+Actions are really easy to configure and use, and can help any organization run test scripts based on committed code. I imagine it helps significantly for continuous integration/continuous development (CI/CD) operations within distributed organizations. You can also proudly display a status badge on your repo README. Hopefully it displays 'passing'. 
 
 Today we're going to walk through exactly how github actions are configured and run, and hopefully demonstrate the diversity of tasks you can accomplish using them. 
 
