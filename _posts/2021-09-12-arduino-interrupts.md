@@ -23,7 +23,21 @@ Before we dive into the code, we need to understand what _exactly_ what the time
 The Arduino Due uses an Atmel SAM3X8E processor, which is much more capable than the Atmega-based line of other Arduino boards. The processor uses an 84 MHz clock, uses a Thumb-2 instruction set architecture (ISA) subset consisting of all base Thumb-2 instructions, 16-bit and 32-bit, a Harvard processor architecture enabling simultaneous instruction fetch with data load/store, three-stage pipeline, single cycle 32-bit multiply, hardware divide, and several other features.
 
 
-The SAM3X83 has several internal timer/counter modules capable of generating interrupts. Page 38 of the [datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-11057-32-bit-Cortex-M3-Microcontroller-SAM3X-SAM3A_Datasheet.pdf) documents the following peripheral identifiers related to the timer module interrupts.
+The SAM3X83 has several internal timer/counter (TC) modules capable of generating interrupts. Page 38 of the [datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-11057-32-bit-Cortex-M3-Microcontroller-SAM3X-SAM3A_Datasheet.pdf) documents the following peripheral identifiers related to the timer module interrupts:
+
+| *Instance ID* | *Instance Name* | *NVIC Interrupt* | *PMC Clock Control* | *Description* |
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
+| 27 | TC0 | X | X | Timer Counter Channel 0 | 
+| 28 | TC1 | X | X | Timer Counter Channel 1 | 
+| 29 | TC2 | X | X | Timer Counter Channel 2 | 
+| ... | ... | ... | ... | ... | 
+| 35 | TC8 | X | X | Timer Counter Channel 8 | 
+
+Ok there are quite a few new acronyms above. Let's break these down. The TC modules each manage some sort of timing functionality - they can count up, down, issue interrupts, toggle general purpose input/outputs (GPIOs). These interrupts and associated peripheral identifiers are used by the Nested Vector Interrupt Controller (NVIC) to manage interrupts. The NVIC provides up to 16 interrupt priority levels. 
+
+
+
+As far as system-level views of interrupts are concerned, there are some core registers that are associated with them.
 
 
 
